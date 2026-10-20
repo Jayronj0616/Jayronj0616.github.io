@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RONIN — Privacy policy</title>
+  <meta name="description" content="What the RONIN personal assistant reads from a Google account, where it is stored, who it is shared with, and how to remove it.">
+  <style>
+    :root { --bg: #f9f9f7; --ink: #0b0b0b; --muted: #52514e; --line: #e1e0d9; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0d0d0d; --ink: #ffffff; --muted: #c3c2b7; --line: #2c2c2a; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { font-size: 1.5rem; margin: 0 0 0.25rem; }
+    .updated { color: var(--muted); margin: 0 0 2rem; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 0.5rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.25rem 0; }
+    a { color: inherit; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RONIN — Privacy policy</h1>
+    <p class="updated">Last updated 20 October 2026. <a href="index.html">About RONIN</a></p>
+
+    <p>
+      RONIN is a personal assistant written and run by one person, for their own use. It is not a
+      service offered to the public. This policy describes what it does with the Google account of
+      the person who runs it.
+    </p>
+
+    <h2>What it accesses</h2>
+    <p>When its owner signs in with Google, RONIN asks for:</p>
+    <ul>
+      <li><strong>Gmail, read-only</strong> (<code>gmail.readonly</code>): sender, recipients, subject, date, labels and the short preview snippet of each message, to work out which conversations are waiting on a reply.</li>
+      <li><strong>Gmail, modify</strong> (<code>gmail.modify</code>), only if the owner switches the feature on: to move old bulk mail (newsletters and notifications) to Gmail's Trash after the owner approves each batch. RONIN never permanently deletes mail and never empties the Trash.</li>
+      <li><strong>Google Calendar, read-only</strong> (<code>calendar.readonly</code>), only if the owner switches the feature on: event titles and times, to notice clashes and invitations awaiting a reply. Event descriptions and attendee lists are not requested.</li>
+    </ul>
+
+    <h2>What it does not do with mail</h2>
+    <ul>
+      <li>Messages that look sensitive — password resets, one-time codes, security notices, banking — are recorded by metadata only; their content is not stored.</li>
+      <li>RONIN does not send, reply to, or forward email, and does not change anything in a mailbox other than moving approved bulk mail to Trash.</li>
+    </ul>
+
+    <h2>Where the data is kept</h2>
+    <ul>
+      <li>In a private database in the owner's own account with Supabase (a hosted database provider), and on the owner's own computer. Access tokens are stored encrypted.</li>
+      <li>There is no shared database, and nobody other than the owner has an account on it.</li>
+    </ul>
+
+    <h2>Who it is shared with</h2>
+    <p>
+      With no one for their own purposes. It is not sold, rented, used for advertising, or used to
+      train models. Two service providers process it on the owner's behalf, each under the owner's
+      own account:
+    </p>
+    <ul>
+      <li><strong>Supabase</strong> hosts the database described above.</li>
+      <li><strong>Microsoft Azure OpenAI</strong> processes text from the owner's mail only if the owner switches on the "ask" feature: short passages relevant to a question the owner has typed or spoken are sent to the owner's own Azure OpenAI resource to produce an answer.</li>
+    </ul>
+    <p>
+      That processing is governed by the owner's agreements with those providers, and RONIN uses
+      the data for nothing else.
+    </p>
+
+    <h2>Limited Use</h2>
+    <p>
+      RONIN's use and transfer of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy#limited-use-requirements">Google API Services User Data Policy</a>,
+      including its Limited Use requirements. Information obtained from Gmail is used only to
+      provide and improve the user-facing features described above, and is not transferred to
+      others except as described here, nor read by humans except with the owner's consent or as
+      required by law.
+    </p>
+
+    <h2>Keeping and deleting it</h2>
+    <ul>
+      <li>Data is kept for as long as the owner uses RONIN, and can be removed at any time.</li>
+      <li>To stop all access: remove RONIN at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Access ends immediately.</li>
+      <li>To delete what RONIN holds: the owner deletes the rows in their own database. Nothing is held elsewhere.</li>
+    </ul>
+
+    <h2>Changes</h2>
+    <p>If this changes, this page changes, and the date above moves.</p>
+
+    <footer>
+      Contact: <a href="mailto:jayronxjavier@gmail.com">jayronxjavier@gmail.com</a>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RONIN — a personal assistant</title>
+  <meta name="description" content="RONIN is a personal assistant that watches one person's code repositories and Gmail and tells them only what is worth telling.">
+  <style>
+    :root { --bg: #f9f9f7; --ink: #0b0b0b; --muted: #52514e; --line: #e1e0d9; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0d0d0d; --ink: #ffffff; --muted: #c3c2b7; --line: #2c2c2a; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+    h1 { font-size: 1.6rem; letter-spacing: 0.04em; margin: 0 0 0.25rem; }
+    .tag { color: var(--muted); margin: 0 0 2rem; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 0.5rem; }
+    p, li { color: var(--ink); }
+    ul { padding-left: 1.2rem; }
+    a { color: inherit; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RONIN</h1>
+    <p class="tag">A personal assistant that tells one person only what is worth telling.</p>
+
+    <p>
+      RONIN is a personal project, written and run by one person for their own use. It watches the
+      owner's code repositories and Gmail mailbox, decides what actually needs attention, and
+      reports it — interrupting rarely, and doing nothing on its own that cannot be undone or that
+      has not been approved first.
+    </p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Reads the owner's Gmail (sender, subject, date and a short snippet) to notice, for example, a reply that has been waiting for weeks.</li>
+      <li>Reads the owner's local code repositories to notice unpushed work or an exposed secret.</li>
+      <li>On the owner's explicit approval, can move old bulk mail to Gmail's Trash. It never permanently deletes anything.</li>
+    </ul>
+
+    <h2>Who it is for</h2>
+    <p>
+      Only its owner. RONIN is not offered to the public, has no other users, and runs on the
+      owner's own computer. The Google sign-in exists so that RONIN can read the owner's own mailbox.
+    </p>
+
+    <h2>Your data</h2>
+    <p>See the <a href="privacy.html">privacy policy</a> for exactly what is read, where it is kept, and how to remove it.</p>
+
+    <footer>
+      Contact: <a href="mailto:jayronxjavier@gmail.com">jayronxjavier@gmail.com</a>
+    </footer>
+  </main>
+</body>
+</html>
